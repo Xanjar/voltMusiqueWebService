@@ -30,7 +30,7 @@ public class Plainte {
     public Plainte() {
     }
 
-    public Plainte(Long idPlainte, @NotNull @Size(max = 255) String message, @NotNull Date datePlainte, Musique musique) {
+    public Plainte(@NotNull @Size(max = 255) String message, @NotNull Date datePlainte, Musique musique) {
         this.idPlainte = idPlainte;
         this.message = message;
         this.datePlainte = datePlainte;

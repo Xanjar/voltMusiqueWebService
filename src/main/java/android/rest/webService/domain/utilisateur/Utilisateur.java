@@ -71,7 +71,7 @@ public class Utilisateur {
     public Utilisateur() {
     }
 
-    public Utilisateur(Long idutilisateur, @NotNull @Size(max = 50) String pseudo, @Size(max = 255) String nom, @Size(max = 255) String prenom, @NotNull @Size(max = 255) String email, Date dateNaissance, @NotNull Role role, @Size(max = 20) String numEtu) {
+    public Utilisateur(@NotNull @Size(max = 50) String pseudo, @Size(max = 255) String nom, @Size(max = 255) String prenom, @NotNull @Size(max = 255) String email, Date dateNaissance, @NotNull Role role, @Size(max = 20) String numEtu) {
         this.idutilisateur = idutilisateur;
         this.pseudo = pseudo;
         this.nom = nom;

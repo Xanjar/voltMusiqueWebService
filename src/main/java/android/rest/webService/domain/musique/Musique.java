@@ -53,7 +53,7 @@ public class Musique {
     public Musique() {
     }
 
-    public Musique(Long idMusique, @NotNull @Size(max = 255) String titre, @NotNull Date dateSortie, Utilisateur utilisateur, Album album) {
+    public Musique(@NotNull @Size(max = 255) String titre, @NotNull Date dateSortie, Utilisateur utilisateur, Album album) {
         this.idMusique = idMusique;
         this.titre = titre;
         this.dateSortie = dateSortie;

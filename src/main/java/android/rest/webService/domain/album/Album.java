@@ -40,7 +40,7 @@ public class Album {
     public Album() {
     }
 
-    public Album(Long idalbum, @NotNull @Size(max = 255) String titre, @Size(max = 400) String description, Date dateSortie, Utilisateur utilisateur) {
+    public Album(@NotNull @Size(max = 255) String titre, @Size(max = 400) String description, Date dateSortie, Utilisateur utilisateur) {
         this.idalbum = idalbum;
         this.titre = titre;
         this.description = description;

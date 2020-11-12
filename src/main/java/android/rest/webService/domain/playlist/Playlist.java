@@ -33,7 +33,7 @@ public class Playlist {
     public Playlist() {
     }
 
-    public Playlist(Long idplaylist, @NotNull @Size(max = 255) String titre, Utilisateur utilisateur) {
+    public Playlist(@NotNull @Size(max = 255) String titre, Utilisateur utilisateur) {
         this.idplaylist = idplaylist;
         this.titre = titre;
         this.utilisateur = utilisateur;

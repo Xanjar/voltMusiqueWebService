@@ -21,3 +21,18 @@ CREATE TABLE `volt_musique`.`plainte` (
   `message` VARCHAR(255) NOT NULL,
   `date_plainte` DATE NOT NULL,
   PRIMARY KEY (`idplainte`));
+
+  ALTER TABLE `volt_musique`.`utilisateur`
+CHANGE COLUMN `idutilisateur` `idutilisateur` BIGINT(20) NOT NULL AUTO_INCREMENT ;
+
+ALTER TABLE `volt_musique`.`playlist`
+    CHANGE COLUMN `idplaylist` `idplaylist` BIGINT(20) NOT NULL AUTO_INCREMENT ;
+
+ALTER TABLE `volt_musique`.`plainte`
+    CHANGE COLUMN `idplainte` `idplainte` BIGINT(20) NOT NULL AUTO_INCREMENT ;
+
+ALTER TABLE `volt_musique`.`album`
+    CHANGE COLUMN `idalbum` `idalbum` BIGINT(20) NOT NULL AUTO_INCREMENT ;
+
+ALTER TABLE `volt_musique`.`musique`
+    CHANGE COLUMN `idmusique` `idmusique` BIGINT(20) NOT NULL AUTO_INCREMENT ;
