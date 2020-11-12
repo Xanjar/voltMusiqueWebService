@@ -1,9 +1,14 @@
 package android.rest.webService.domain.utilisateur;
 
+import android.rest.webService.domain.album.Album;
+import android.rest.webService.domain.musique.Musique;
+import android.rest.webService.domain.playlist.Playlist;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table(name = "utilisateur")
@@ -36,6 +41,32 @@ public class Utilisateur {
 
     @Size(max = 20)
     private String numEtu;
+
+    @OneToMany(mappedBy="utilisateur")
+    private Set<Playlist> playlists;
+
+    @OneToMany(mappedBy="utilisateur")
+    private Set<Album> albums;
+
+    @OneToMany(mappedBy="utilisateur")
+    private Set<Musique> musiques;
+
+    @ManyToMany
+    @JoinTable(
+            name = "aimer_album",
+            joinColumns = @JoinColumn(name = "idutilisateur"),
+            inverseJoinColumns = @JoinColumn(name = "idalbum"))
+    private Set<Album> aimeAlbums;
+
+    @ManyToMany
+    @JoinTable(
+            name = "aimer_musique",
+            joinColumns = @JoinColumn(name = "idutilisateur"),
+            inverseJoinColumns = @JoinColumn(name = "idmusique"))
+    private Set<Album> aimeMusiques;
+
+    @ManyToMany(mappedBy = "feats")
+    private Set<Musique> featuring;
 
     public Utilisateur() {
     }
@@ -113,5 +144,53 @@ public class Utilisateur {
 
     public void setNumEtu(String numEtu) {
         this.numEtu = numEtu;
+    }
+
+    public Set<Playlist> getPlaylists() {
+        return playlists;
+    }
+
+    public void setPlaylists(Set<Playlist> playlist) {
+        this.playlists = playlist;
+    }
+
+    public Set<Album> getAlbums() {
+        return albums;
+    }
+
+    public void setAlbums(Set<Album> albums) {
+        this.albums = albums;
+    }
+
+    public Set<Musique> getMusiques() {
+        return musiques;
+    }
+
+    public void setMusiques(Set<Musique> musiques) {
+        this.musiques = musiques;
+    }
+
+    public Set<Album> getAimeAlbums() {
+        return aimeAlbums;
+    }
+
+    public void setAimeAlbums(Set<Album> aimeAlbums) {
+        this.aimeAlbums = aimeAlbums;
+    }
+
+    public Set<Album> getAimeMusiques() {
+        return aimeMusiques;
+    }
+
+    public void setAimeMusiques(Set<Album> aimeMusiques) {
+        this.aimeMusiques = aimeMusiques;
+    }
+
+    public Set<Musique> getFeaturing() {
+        return featuring;
+    }
+
+    public void setFeaturing(Set<Musique> featuring) {
+        this.featuring = featuring;
     }
 }
