@@ -1,4 +1,4 @@
-package android.rest.webService.service;
+package android.rest.webService.service.utilisateur;
 
 import android.rest.webService.domain.utilisateur.Utilisateur;
 
