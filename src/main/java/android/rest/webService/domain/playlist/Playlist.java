@@ -55,13 +55,6 @@ public class Playlist {
         this.titre = titre;
     }
 
-    public Utilisateur getutilisateur() {
-        return utilisateur;
-    }
-
-    public void setutilisateur(Utilisateur utilisateur) {
-        this.utilisateur = utilisateur;
-    }
 
     public Utilisateur getUtilisateur() {
         return utilisateur;

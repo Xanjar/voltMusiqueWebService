@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.Date;
 import java.util.List;
@@ -19,14 +20,17 @@ class UtilisateurRepositoryTest {
 
     @Autowired
     private UtilisateurRepository repository;
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
     private Utilisateur utilisateur= new Utilisateur("toto","nom",
-            "prenom","toto@toto.fr",new Date(), Role.USER,"39015035");
+            "prenom","toto@toto.fr",new Date(), "tototo", Role.USER,"39015035");
 
 
 
     @Test
     @Order(1)
     void insertTest() {
+        utilisateur.setPassword(bCryptPasswordEncoder.encode("tototo"));
         repository.save(utilisateur);
     }
 

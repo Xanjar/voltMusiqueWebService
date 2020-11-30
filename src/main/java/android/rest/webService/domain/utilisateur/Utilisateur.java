@@ -35,6 +35,9 @@ public class Utilisateur {
 
     private Date dateNaissance;
 
+    @Size(max = 255)
+    private String password;
+
     @NotNull
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -71,7 +74,8 @@ public class Utilisateur {
     public Utilisateur() {
     }
 
-    public Utilisateur(@NotNull @Size(max = 50) String pseudo, @Size(max = 255) String nom, @Size(max = 255) String prenom, @NotNull @Size(max = 255) String email, Date dateNaissance, @NotNull Role role, @Size(max = 20) String numEtu) {
+    public Utilisateur(@NotNull @Size(max = 50) String pseudo, @Size(max = 255) String nom, @Size(max = 255) String prenom, @NotNull @Size(max = 255) String email, Date dateNaissance, @Size(max = 255) String password, @NotNull Role role, @Size(max = 20) String numEtu) {
+        this.password = password;
         this.idutilisateur = idutilisateur;
         this.pseudo = pseudo;
         this.nom = nom;
@@ -80,6 +84,7 @@ public class Utilisateur {
         this.dateNaissance = dateNaissance;
         this.role = role;
         this.numEtu = numEtu;
+        this.password = password;
     }
 
     public Long getIdutilisateur() {
@@ -192,5 +197,13 @@ public class Utilisateur {
 
     public void setFeaturing(Set<Musique> featuring) {
         this.featuring = featuring;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
