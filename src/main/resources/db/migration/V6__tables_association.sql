@@ -69,11 +69,11 @@ CREATE TABLE `heroku_d6d405d196910d3`.`playlist_musique` (
   INDEX `idmusique_idx` (`idmusique` ASC),
   CONSTRAINT `idmusique_playlist_musique`
     FOREIGN KEY (`idmusique`)
-    REFERENCES `volt_musique`.`musique` (`idmusique`)
+    REFERENCES `heroku_d6d405d196910d3`.`musique` (`idmusique`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `idplaylist_playlist_musique`
     FOREIGN KEY (`idplaylist`)
-    REFERENCES `volt_musique`.`playlist` (`idplaylist`)
+    REFERENCES `heroku_d6d405d196910d3`.`playlist` (`idplaylist`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
