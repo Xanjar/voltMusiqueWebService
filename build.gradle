@@ -24,7 +24,11 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
-	compile('org.flywaydb:flyway-core')
+	implementation('org.flywaydb:flyway-core') {
+		version {
+			strictly '5.2.4'
+		}
+	}
 	compile('org.springframework.boot:spring-boot-starter-jdbc')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('mysql:mysql-connector-java')
