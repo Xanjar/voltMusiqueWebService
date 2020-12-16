@@ -16,7 +16,7 @@ ALTER TABLE `heroku_d6d405d196910d3`.`musique`
 ALTER TABLE `heroku_d6d405d196910d3`.`musique`
     ADD CONSTRAINT `idutilisateur_musique`
     FOREIGN KEY (`idutilisateur`)
-    REFERENCES `volt_musique`.`utilisateur` (`idutilisateur`)
+    REFERENCES `heroku_d6d405d196910d3`.`utilisateur` (`idutilisateur`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION;
 
