@@ -1,4 +1,4 @@
-CREATE TABLE `volt_musique`.`utilisateur` (
+CREATE TABLE `heroku_d6d405d196910d3`.`utilisateur` (
   `idutilisateur` INT NOT NULL,
   `pseudo` VARCHAR(50) NOT NULL,
   `nom` VARCHAR(255) NULL,
@@ -8,4 +8,4 @@ CREATE TABLE `volt_musique`.`utilisateur` (
   `role` VARCHAR(45) NOT NULL,
   `num_etu` VARCHAR(20) NULL,
   PRIMARY KEY (`idutilisateur`),
-  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE);
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC));
