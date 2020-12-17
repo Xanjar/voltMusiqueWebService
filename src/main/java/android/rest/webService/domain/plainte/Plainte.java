@@ -14,6 +14,7 @@ public class Plainte {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idplainte", nullable = false)
     private Long idPlainte;
 
     @NotNull

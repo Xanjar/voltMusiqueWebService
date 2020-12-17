@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="2213.348289141414" y="1357.0">android.rest.webService.service.utilisateur.IUtilisateurService</node>
+    <node x="5242.931622474747" y="1002.5">android.rest.webService.service.plainte.PlainteService</node>
+    <node x="5348.431622474747" y="573.5">android.rest.webService.dao.plainte.PlainteRepository</node>
+    <node x="0.0" y="573.5">android.rest.webService.dao.plainte.PlainteRepositoryImpl</node>
+    <node x="4107.223289141413" y="1598.5">android.rest.webService.service.musique.MusiqueService</node>
+    <node x="5370.181622474747" y="100.5">android.rest.webService.dao.plainte.PlainteRepositoryCustom</node>
+    <node x="880.25" y="1369.0">android.rest.webService.dao.utilisateur.UtilisateurRepositoryImpl</node>
+    <node x="3652.3482891414133" y="958.5">android.rest.webService.service.storage.IFileStorageService</node>
+    <node x="1698.3587058080807" y="33.0">android.rest.webService.domain.playlist.Playlist</node>
+    <node x="682.0" y="561.5">android.rest.webService.service.playlist.IPlaylistService</node>
+    <node x="3259.3482891414137" y="1357.0">android.rest.webService.security.AuthorizationFilter</node>
+    <node x="3652.3482891414133" y="1313.0">android.rest.webService.service.storage.FileStorageService</node>
+    <node x="951.0149558080802" y="1576.5">android.rest.webService.dao.utilisateur.UtilisateurRepositoryTest</node>
+    <node x="4556.963990620489" y="33.0">android.rest.webService.domain.plainte.Plainte</node>
+    <node x="220.0" y="1731.0">android.rest.webService.dao.playlist.PlaylistRepositoryTest</node>
+    <node x="3525.3482891414133" y="1565.0">android.rest.webService.Application</node>
+    <node x="0.0" y="1731.0">android.rest.webService.ApplicationTests</node>
+    <node x="2121.0149558080807" y="1598.5">android.rest.webService.service.utilisateur.UtilisateurService</node>
+    <node x="2876.7912967171715" y="1576.0">android.rest.webService.security.WebSecurityConfiguration</node>
+    <node x="472.0" y="573.5">android.rest.webService.dao.playlist.PlaylistRepository</node>
+    <node x="5140.431622474747" y="561.5">android.rest.webService.service.plainte.IPlainteService</node>
+    <node x="145.33333333333348" y="100.5">android.rest.webService.dao.playlist.PlaylistRepositoryCustom</node>
+    <node x="4745.244833333333" y="1369.0">android.rest.webService.dao.album.AlbumRepository</node>
+    <node x="1614.0149558080807" y="1587.0">android.rest.webService.controller.UtilisateurController</node>
+    <node x="1215.0149558080807" y="1587.0">android.rest.webService.service.utilisateur.UtilisateurDetailsServiceImpl</node>
+    <node x="1598.846023809524" y="1357.0">android.rest.webService.dao.utilisateur.UtilisateurRepository</node>
+    <node x="4351.348289141413" y="1369.0">android.rest.webService.dao.musique.MusiqueRepository</node>
+    <node x="4134.348289141413" y="1369.0">android.rest.webService.dao.album.AlbumRepositoryImpl</node>
+    <node x="4179.848289141413" y="1014.5">android.rest.webService.dao.album.AlbumRepositoryCustom</node>
+    <node x="1049.5281666666665" y="1014.5">android.rest.webService.dao.utilisateur.UtilisateurRepositoryCustom</node>
+    <node x="4932.431622474747" y="561.5">android.rest.webService.service.album.IAlbumService</node>
+    <node x="3764.798289141414" y="0.0">android.rest.webService.domain.album.Album</node>
+    <node x="598.0" y="1002.5">android.rest.webService.service.playlist.PlaylistService</node>
+    <node x="232.0" y="573.5">android.rest.webService.dao.playlist.PlaylistRepositoryImpl</node>
+    <node x="3076.3482891414137" y="1014.5">android.rest.webService.dao.musique.MusiqueRepositoryCustom</node>
+    <node x="3916.3482891414133" y="1002.5">android.rest.webService.service.musique.IMusiqueService</node>
+    <node x="3027.3482891414137" y="1369.0">android.rest.webService.dao.musique.MusiqueRepositoryImpl</node>
+    <node x="3969.819833333333" y="451.0">android.rest.webService.domain.musique.Musique</node>
+    <node x="4375.348289141413" y="1587.0">android.rest.webService.controller.FilesController</node>
+    <node x="1619.7649558080807" y="826.0">android.rest.webService.domain.utilisateur.Utilisateur</node>
+    <node x="4854.181622474747" y="1598.5">android.rest.webService.service.album.AlbumService</node>
+    <node x="1207.8021250000002" y="517.0">android.rest.webService.domain.utilisateur.Role</node>
+    <node x="2442.3482891414137" y="1345.5">android.rest.webService.security.AuthenticationFilter</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="android.rest.webService.dao.utilisateur.UtilisateurRepositoryImpl" target="android.rest.webService.dao.utilisateur.UtilisateurRepositoryCustom">
+      <point x="0.0" y="-15.0" />
+      <point x="1002.25" y="1293.0" />
+      <point x="1114.2781666666665" y="1293.0" />
+      <point x="-64.75" y="15.0" />
+    </edge>
+    <edge source="android.rest.webService.controller.FilesController" target="android.rest.webService.dao.album.AlbumRepository">
+      <point x="185.83333333333348" y="-38.5" />
+      <point x="4784.181622474747" y="1545.0" />
+      <point x="4786.744833333333" y="1545.0" />
+      <point x="-41.5" y="15.0" />
+    </edge>
+    <edge source="android.rest.webService.domain.musique.Musique" target="android.rest.webService.domain.playlist.Playlist">
+      <point x="-142.54166666666674" y="-137.5" />
+      <point x="3982.7781666666665" y="381.0" />
+      <point x="1847.6768876262624" y="381.0" />
+      <point x="39.818181818181756" y="82.5" />
+    </edge>
+    <edge source="android.rest.webService.dao.playlist.PlaylistRepository" target="android.rest.webService.dao.playlist.PlaylistRepositoryCustom">
+      <point x="-47.25" y="-15.0" />
+      <point x="519.25" y="421.0" />
+      <point x="342.0" y="421.0" />
+      <point x="78.66666666666669" y="15.0" />
+    </edge>
+    <edge source="android.rest.webService.service.playlist.IPlaylistService" target="android.rest.webService.domain.playlist.Playlist">
+      <point x="0.0" y="-27.0" />
+      <point x="776.5" y="431.0" />
+      <point x="1748.131433080808" y="431.0" />
+      <point x="-59.72727272727275" y="82.5" />
+    </edge>
+    <edge source="android.rest.webService.dao.utilisateur.UtilisateurRepository" target="android.rest.webService.domain.utilisateur.Utilisateur">
+      <point x="70.25" y="-27.0" />
+      <point x="1809.596023809524" y="1293.0" />
+      <point x="1852.2649558080807" y="1293.0" />
+      <point x="0.0" y="203.5" />
+    </edge>
+    <edge source="android.rest.webService.domain.musique.Musique" target="android.rest.webService.domain.plainte.Plainte">
+      <point x="64.79166666666674" y="-137.5" />
+      <point x="4190.1115" y="401.0" />
+      <point x="4574.249704906204" y="401.0" />
+      <point x="-103.71428571428578" y="82.5" />
+    </edge>
+    <edge source="android.rest.webService.controller.FilesController" target="android.rest.webService.service.storage.FileStorageService">
+      <point x="-111.5" y="-38.5" />
+      <point x="4486.848289141413" y="1515.0" />
+      <point x="3835.3482891414133" y="1515.0" />
+      <point x="61.0" y="71.0" />
+    </edge>
+    <edge source="android.rest.webService.service.album.AlbumService" target="android.rest.webService.service.album.IAlbumService">
+      <point x="62.66666666666697" y="-27.0" />
+      <point x="5010.848289141413" y="1545.0" />
+      <point x="5026.431622474747" y="1545.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="android.rest.webService.service.album.AlbumService" target="android.rest.webService.dao.album.AlbumRepository">
+      <point x="-62.66666666666697" y="-27.0" />
+      <point x="4885.514955808079" y="1545.0" />
+      <point x="4869.744833333333" y="1545.0" />
+      <point x="41.5" y="15.0" />
+    </edge>
+    <edge source="android.rest.webService.dao.musique.MusiqueRepository" target="android.rest.webService.domain.musique.Musique">
+      <point x="45.25" y="-15.0" />
+      <point x="4487.098289141414" y="806.0" />
+      <point x="4203.069833333333" y="806.0" />
+      <point x="77.75" y="137.5" />
+    </edge>
+    <edge source="android.rest.webService.dao.plainte.PlainteRepository" target="android.rest.webService.dao.plainte.PlainteRepositoryCustom">
+      <point x="45.25" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="android.rest.webService.dao.utilisateur.UtilisateurRepositoryTest" target="android.rest.webService.dao.utilisateur.UtilisateurRepository">
+      <point x="97.59999999999991" y="-49.0" />
+      <point x="1170.6149558080801" y="1515.0" />
+      <point x="1618.9174523809525" y="1515.0" />
+      <point x="-120.42857142857156" y="27.0" />
+    </edge>
+    <edge source="android.rest.webService.security.WebSecurityConfiguration" target="android.rest.webService.security.AuthorizationFilter">
+      <point x="128.50000000000023" y="-49.5" />
+      <point x="3262.2912967171715" y="1545.0" />
+      <point x="3422.8482891414137" y="1545.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="android.rest.webService.service.playlist.PlaylistService" target="android.rest.webService.service.playlist.IPlaylistService">
+      <point x="63.0" y="-27.0" />
+      <point x="755.5" y="806.0" />
+      <point x="776.5" y="806.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="android.rest.webService.service.musique.MusiqueService" target="android.rest.webService.domain.musique.Musique">
+      <point x="0.0" y="-27.0" />
+      <point x="4205.723289141413" y="1535.0" />
+      <point x="4123.848289141413" y="1535.0" />
+      <point x="4123.848289141413" y="806.0" />
+      <point x="4171.969833333334" y="806.0" />
+      <point x="46.65000000000009" y="137.5" />
+    </edge>
+    <edge source="android.rest.webService.service.musique.MusiqueService" target="android.rest.webService.service.musique.IMusiqueService">
+      <point x="-65.66666666666674" y="-27.0" />
+      <point x="4140.056622474747" y="1545.0" />
+      <point x="4014.8482891414133" y="1545.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="android.rest.webService.dao.album.AlbumRepository" target="android.rest.webService.domain.album.Album">
+      <point x="41.5" y="-15.0" />
+      <point x="4869.744833333333" y="301.0" />
+      <point x="3999.131622474747" y="301.0" />
+      <point x="86.33333333333348" y="115.5" />
+    </edge>
+    <edge source="android.rest.webService.dao.album.AlbumRepositoryImpl" target="android.rest.webService.dao.album.AlbumRepositoryCustom">
+      <point x="0.0" y="-15.0" />
+      <point x="-53.0" y="15.0" />
+    </edge>
+    <edge source="android.rest.webService.controller.FilesController" target="android.rest.webService.domain.musique.Musique">
+      <point x="37.166666666666515" y="-38.5" />
+      <point x="4635.51495580808" y="1545.0" />
+      <point x="4668.869833333334" y="1545.0" />
+      <point x="4668.869833333334" y="796.0" />
+      <point x="4234.169833333333" y="796.0" />
+      <point x="108.85000000000014" y="137.5" />
+    </edge>
+    <edge source="android.rest.webService.security.WebSecurityConfiguration" target="android.rest.webService.security.AuthenticationFilter">
+      <point x="-128.49999999999977" y="-49.5" />
+      <point x="3005.2912967171715" y="1545.0" />
+      <point x="2724.8482891414137" y="1545.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="android.rest.webService.dao.playlist.PlaylistRepositoryImpl" target="android.rest.webService.dao.playlist.PlaylistRepositoryCustom">
+      <point x="0.0" y="-15.0" />
+      <point x="342.0" y="431.0" />
+      <point x="263.3333333333335" y="431.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="android.rest.webService.service.plainte.PlainteService" target="android.rest.webService.domain.plainte.Plainte">
+      <point x="0.0" y="-27.0" />
+      <point x="5336.431622474747" y="806.0" />
+      <point x="5337.931622474747" y="806.0" />
+      <point x="5337.931622474747" y="261.0" />
+      <point x="4747.106847763347" y="261.0" />
+      <point x="69.14285714285711" y="82.5" />
+    </edge>
+    <edge source="android.rest.webService.Application" target="android.rest.webService.service.storage.FileStorageService">
+      <point x="0.0" y="-60.5" />
+      <point x="-61.0" y="71.0" />
+    </edge>
+    <edge source="android.rest.webService.service.utilisateur.IUtilisateurService" target="android.rest.webService.domain.utilisateur.Utilisateur">
+      <point x="0.0" y="-27.0" />
+      <point x="2317.848289141414" y="1283.0" />
+      <point x="2007.2649558080807" y="1283.0" />
+      <point x="155.0" y="203.5" />
+    </edge>
+    <edge source="android.rest.webService.service.storage.FileStorageService" target="android.rest.webService.service.storage.IFileStorageService">
+      <point x="0.0" y="-71.0" />
+      <point x="0.0" y="71.0" />
+    </edge>
+    <edge source="android.rest.webService.service.album.AlbumService" target="android.rest.webService.domain.album.Album">
+      <point x="0.0" y="-27.0" />
+      <point x="4948.181622474747" y="1545.0" />
+      <point x="4921.931622474747" y="1545.0" />
+      <point x="4921.931622474747" y="291.0" />
+      <point x="4023.798289141414" y="291.0" />
+      <point x="111.0" y="115.5" />
+    </edge>
+    <edge source="android.rest.webService.dao.plainte.PlainteRepository" target="android.rest.webService.domain.plainte.Plainte">
+      <point x="-45.25" y="-15.0" />
+      <point x="5393.681622474747" y="251.0" />
+      <point x="4781.678276334776" y="251.0" />
+      <point x="103.71428571428578" y="82.5" />
+    </edge>
+    <edge source="android.rest.webService.service.plainte.PlainteService" target="android.rest.webService.dao.plainte.PlainteRepository">
+      <point x="62.333333333333314" y="-27.0" />
+      <point x="5398.76495580808" y="806.0" />
+      <point x="5438.931622474747" y="806.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="android.rest.webService.domain.plainte.Plainte" target="android.rest.webService.domain.musique.Musique">
+      <point x="-34.57142857142867" y="82.5" />
+      <point x="4643.392562049061" y="421.0" />
+      <point x="4241.944833333333" y="421.0" />
+      <point x="116.625" y="-137.5" />
+    </edge>
+    <edge source="android.rest.webService.service.utilisateur.UtilisateurService" target="android.rest.webService.service.utilisateur.IUtilisateurService">
+      <point x="69.66666666666652" y="-27.0" />
+      <point x="2295.181622474747" y="1545.0" />
+      <point x="2317.848289141414" y="1545.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="android.rest.webService.controller.FilesController" target="android.rest.webService.dao.utilisateur.UtilisateurRepository">
+      <point x="-185.83333333333348" y="-38.5" />
+      <point x="4412.51495580808" y="1525.0" />
+      <point x="1859.7745952380956" y="1525.0" />
+      <point x="120.42857142857156" y="27.0" />
+    </edge>
+    <edge source="android.rest.webService.controller.FilesController" target="android.rest.webService.dao.musique.MusiqueRepository">
+      <point x="-37.166666666666515" y="-38.5" />
+      <point x="4561.181622474747" y="1505.0" />
+      <point x="4487.098289141413" y="1505.0" />
+      <point x="45.25" y="15.0" />
+    </edge>
+    <edge source="android.rest.webService.service.plainte.PlainteService" target="android.rest.webService.service.plainte.IPlainteService">
+      <point x="-62.33333333333334" y="-27.0" />
+      <point x="5274.098289141413" y="806.0" />
+      <point x="5233.931622474747" y="806.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="android.rest.webService.service.plainte.IPlainteService" target="android.rest.webService.domain.plainte.Plainte">
+      <point x="0.0" y="-27.0" />
+      <point x="5233.931622474747" y="271.0" />
+      <point x="4712.535419191918" y="271.0" />
+      <point x="34.57142857142867" y="82.5" />
+    </edge>
+    <edge source="android.rest.webService.domain.album.Album" target="android.rest.webService.domain.musique.Musique">
+      <point x="37.0" y="115.5" />
+      <point x="3949.798289141414" y="321.0" />
+      <point x="4138.278166666667" y="321.0" />
+      <point x="12.958333333333258" y="-137.5" />
+    </edge>
+    <edge source="android.rest.webService.dao.plainte.PlainteRepositoryImpl" target="android.rest.webService.dao.playlist.PlaylistRepositoryCustom">
+      <point x="0.0" y="-15.0" />
+      <point x="106.0" y="431.0" />
+      <point x="184.66666666666697" y="431.0" />
+      <point x="-78.66666666666669" y="15.0" />
+    </edge>
+    <edge source="android.rest.webService.domain.album.Album" target="android.rest.webService.domain.utilisateur.Utilisateur">
+      <point x="-135.66666666666652" y="115.5" />
+      <point x="3777.131622474747" y="391.0" />
+      <point x="1829.8587058080807" y="391.0" />
+      <point x="1829.8587058080807" y="806.0" />
+      <point x="1808.6712058080807" y="806.0" />
+      <point x="-43.59375" y="-203.5" />
+    </edge>
+    <edge source="android.rest.webService.domain.utilisateur.Utilisateur" target="android.rest.webService.domain.album.Album">
+      <point x="72.65625" y="-203.5" />
+      <point x="1924.9212058080807" y="786.0" />
+      <point x="1873.8587058080807" y="786.0" />
+      <point x="1873.8587058080807" y="431.0" />
+      <point x="3875.798289141414" y="431.0" />
+      <point x="-37.0" y="115.5" />
+    </edge>
+    <edge source="android.rest.webService.dao.utilisateur.UtilisateurRepository" target="android.rest.webService.dao.utilisateur.UtilisateurRepositoryCustom">
+      <point x="-70.25" y="-27.0" />
+      <point x="1669.096023809524" y="1253.0" />
+      <point x="1243.7781666666665" y="1253.0" />
+      <point x="64.75" y="15.0" />
+    </edge>
+    <edge source="android.rest.webService.service.playlist.PlaylistService" target="android.rest.webService.dao.playlist.PlaylistRepository">
+      <point x="-63.0" y="-27.0" />
+      <point x="629.5" y="806.0" />
+      <point x="566.5" y="806.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="android.rest.webService.domain.utilisateur.Utilisateur" target="android.rest.webService.domain.musique.Musique">
+      <point x="101.71875" y="-203.5" />
+      <point x="1953.9837058080807" y="746.0" />
+      <point x="3985.369833333333" y="746.0" />
+      <point x="-139.95000000000005" y="137.5" />
+    </edge>
+    <edge source="android.rest.webService.service.utilisateur.UtilisateurService" target="android.rest.webService.domain.utilisateur.Utilisateur">
+      <point x="0.0" y="-27.0" />
+      <point x="2225.5149558080807" y="1545.0" />
+      <point x="2202.848289141414" y="1545.0" />
+      <point x="2202.848289141414" y="1293.0" />
+      <point x="1955.5982891414137" y="1293.0" />
+      <point x="103.33333333333303" y="203.5" />
+    </edge>
+    <edge source="android.rest.webService.dao.musique.MusiqueRepository" target="android.rest.webService.dao.musique.MusiqueRepositoryCustom">
+      <point x="-45.25" y="-15.0" />
+      <point x="4396.598289141413" y="1293.0" />
+      <point x="3247.3482891414137" y="1293.0" />
+      <point x="57.0" y="15.0" />
+    </edge>
+    <edge source="android.rest.webService.domain.utilisateur.Utilisateur" target="android.rest.webService.domain.utilisateur.Role">
+      <point x="-217.96875" y="-203.5" />
+      <point x="1634.2962058080807" y="806.0" />
+      <point x="1297.8021250000002" y="806.0" />
+      <point x="0.0" y="71.5" />
+    </edge>
+    <edge source="android.rest.webService.service.album.IAlbumService" target="android.rest.webService.domain.album.Album">
+      <point x="0.0" y="-27.0" />
+      <point x="5026.431622474747" y="281.0" />
+      <point x="4048.464955808081" y="281.0" />
+      <point x="135.66666666666697" y="115.5" />
+    </edge>
+    <edge source="android.rest.webService.service.utilisateur.UtilisateurService" target="android.rest.webService.dao.utilisateur.UtilisateurRepository">
+      <point x="-69.66666666666652" y="-27.0" />
+      <point x="2155.848289141414" y="1535.0" />
+      <point x="1819.6317380952382" y="1535.0" />
+      <point x="80.28571428571422" y="27.0" />
+    </edge>
+    <edge source="android.rest.webService.dao.musique.MusiqueRepositoryImpl" target="android.rest.webService.dao.musique.MusiqueRepositoryCustom">
+      <point x="0.0" y="-15.0" />
+      <point x="-57.0" y="15.0" />
+    </edge>
+    <edge source="android.rest.webService.controller.UtilisateurController" target="android.rest.webService.dao.utilisateur.UtilisateurRepository">
+      <point x="-162.33333333333303" y="-38.5" />
+      <point x="1695.1816224747477" y="1545.0" />
+      <point x="1739.346023809524" y="1545.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="android.rest.webService.domain.musique.Musique" target="android.rest.webService.domain.album.Album">
+      <point x="-38.875" y="-137.5" />
+      <point x="4086.444833333333" y="341.0" />
+      <point x="3900.46495580808" y="341.0" />
+      <point x="-12.333333333333485" y="115.5" />
+    </edge>
+    <edge source="android.rest.webService.service.utilisateur.UtilisateurDetailsServiceImpl" target="android.rest.webService.dao.utilisateur.UtilisateurRepository">
+      <point x="0.0" y="-38.5" />
+      <point x="1404.5149558080807" y="1525.0" />
+      <point x="1659.0603095238098" y="1525.0" />
+      <point x="-80.28571428571422" y="27.0" />
+    </edge>
+    <edge source="android.rest.webService.dao.utilisateur.UtilisateurRepositoryTest" target="android.rest.webService.domain.utilisateur.Utilisateur">
+      <point x="48.80000000000018" y="-49.0" />
+      <point x="1121.8149558080804" y="1495.0" />
+      <point x="1322.5698333333335" y="1495.0" />
+      <point x="1322.5698333333335" y="1283.0" />
+      <point x="1748.9316224747472" y="1283.0" />
+      <point x="-103.33333333333348" y="203.5" />
+    </edge>
+    <edge source="android.rest.webService.domain.utilisateur.Utilisateur" target="android.rest.webService.domain.playlist.Playlist">
+      <point x="-130.78125" y="-203.5" />
+      <point x="1721.4837058080807" y="776.0" />
+      <point x="1796.8587058080807" y="776.0" />
+      <point x="1796.8587058080807" y="421.0" />
+      <point x="1787.9496148989897" y="421.0" />
+      <point x="-19.90909090909099" y="82.5" />
+    </edge>
+    <edge source="android.rest.webService.dao.utilisateur.UtilisateurRepositoryTest" target="android.rest.webService.domain.utilisateur.Role">
+      <point x="-97.59999999999991" y="-49.0" />
+      <point x="975.4149558080803" y="1545.0" />
+      <point x="869.75" y="1545.0" />
+      <point x="869.75" y="806.0" />
+      <point x="1237.8021250000002" y="806.0" />
+      <point x="-60.0" y="71.5" />
+    </edge>
+    <edge source="android.rest.webService.service.musique.MusiqueService" target="android.rest.webService.dao.musique.MusiqueRepository">
+      <point x="65.66666666666663" y="-27.0" />
+      <point x="4271.38995580808" y="1545.0" />
+      <point x="4396.598289141413" y="1545.0" />
+      <point x="-45.25" y="15.0" />
+    </edge>
+    <edge source="android.rest.webService.service.playlist.PlaylistService" target="android.rest.webService.domain.playlist.Playlist">
+      <point x="0.0" y="-27.0" />
+      <point x="692.5" y="806.0" />
+      <point x="671.5" y="806.0" />
+      <point x="671.5" y="421.0" />
+      <point x="1728.222342171717" y="421.0" />
+      <point x="-79.63636363636374" y="82.5" />
+    </edge>
+    <edge source="android.rest.webService.domain.musique.Musique" target="android.rest.webService.domain.utilisateur.Utilisateur">
+      <point x="-77.75" y="137.5" />
+      <point x="4047.569833333333" y="766.0" />
+      <point x="2012.1087058080807" y="766.0" />
+      <point x="159.84375" y="-203.5" />
+    </edge>
+    <edge source="android.rest.webService.service.musique.IMusiqueService" target="android.rest.webService.domain.musique.Musique">
+      <point x="0.0" y="-27.0" />
+      <point x="4014.8482891414133" y="796.0" />
+      <point x="4140.869833333333" y="796.0" />
+      <point x="15.549999999999955" y="137.5" />
+    </edge>
+    <edge source="android.rest.webService.domain.playlist.Playlist" target="android.rest.webService.domain.musique.Musique">
+      <point x="79.63636363636374" y="82.5" />
+      <point x="1887.4950694444444" y="361.0" />
+      <point x="4034.6115" y="361.0" />
+      <point x="-90.70833333333348" y="-137.5" />
+    </edge>
+    <edge source="android.rest.webService.controller.UtilisateurController" target="android.rest.webService.domain.utilisateur.Utilisateur">
+      <point x="162.33333333333303" y="-38.5" />
+      <point x="2019.8482891414137" y="1545.0" />
+      <point x="1935.4511904761907" y="1545.0" />
+      <point x="1935.4511904761907" y="1293.0" />
+      <point x="1903.9316224747472" y="1293.0" />
+      <point x="51.666666666666515" y="203.5" />
+    </edge>
+    <edge source="android.rest.webService.dao.playlist.PlaylistRepository" target="android.rest.webService.domain.playlist.Playlist">
+      <point x="47.25" y="-15.0" />
+      <point x="613.75" y="411.0" />
+      <point x="1708.3132512626262" y="411.0" />
+      <point x="-99.5454545454545" y="82.5" />
+    </edge>
+    <edge source="android.rest.webService.domain.playlist.Playlist" target="android.rest.webService.domain.utilisateur.Utilisateur">
+      <point x="-39.818181818181756" y="82.5" />
+      <point x="1768.040523989899" y="431.0" />
+      <point x="1785.8587058080807" y="431.0" />
+      <point x="1785.8587058080807" y="766.0" />
+      <point x="1692.4212058080807" y="766.0" />
+      <point x="-159.84375" y="-203.5" />
+    </edge>
+    <edge source="android.rest.webService.dao.album.AlbumRepository" target="android.rest.webService.dao.album.AlbumRepositoryCustom">
+      <point x="-41.5" y="-15.0" />
+      <point x="4786.744833333333" y="1283.0" />
+      <point x="4338.848289141413" y="1283.0" />
+      <point x="53.0" y="15.0" />
+    </edge>
+    <edge source="android.rest.webService.security.AuthenticationFilter" target="android.rest.webService.domain.utilisateur.Utilisateur">
+      <point x="0.0" y="-38.5" />
+      <point x="2724.8482891414137" y="1273.0" />
+      <point x="2058.931622474747" y="1273.0" />
+      <point x="206.66666666666652" y="203.5" />
+    </edge>
+    <edge source="android.rest.webService.service.utilisateur.UtilisateurDetailsServiceImpl" target="android.rest.webService.domain.utilisateur.Utilisateur">
+      <point x="-126.33333333333348" y="-38.5" />
+      <point x="1278.1816224747472" y="1505.0" />
+      <point x="1335.9531666666667" y="1505.0" />
+      <point x="1335.9531666666667" y="1293.0" />
+      <point x="1800.5982891414142" y="1293.0" />
+      <point x="-51.666666666666515" y="203.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.4551738534280333" x="4597.110457365791" y="832.4215463561243" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Fields</Category>
+    <Category>Properties</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>packageLocal</VISIBILITY>
+</Diagram>
+

@@ -13,6 +13,7 @@ import java.util.Set;
 public class Playlist {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idplaylist", nullable = false)
     private Long idplaylist;
 
     @NotNull

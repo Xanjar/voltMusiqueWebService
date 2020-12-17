@@ -4,6 +4,7 @@ import android.rest.webService.domain.album.Album;
 import android.rest.webService.domain.plainte.Plainte;
 import android.rest.webService.domain.playlist.Playlist;
 import android.rest.webService.domain.utilisateur.Utilisateur;
+import org.springframework.security.core.context.SecurityContextHolder;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -17,6 +18,7 @@ public class Musique {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idmusique", nullable = false)
     private Long idMusique;
 
     @NotNull
@@ -59,6 +61,15 @@ public class Musique {
         this.dateSortie = dateSortie;
         this.utilisateur = utilisateur;
         this.album = album;
+    }
+
+    @PrePersist
+    private void preventUnAuthorizedRemove() {
+        String name = SecurityContextHolder.getContext().getAuthentication().getName();
+        if(!name.equals(this.utilisateur.getEmail())){
+            throw new SecurityException("User can only delete himself ");
+        }
+
     }
 
     public Long getIdMusique() {

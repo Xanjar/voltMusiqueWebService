@@ -15,6 +15,7 @@ public class Album {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idalbum", nullable = false)
     private Long idalbum;
 
     @NotNull
