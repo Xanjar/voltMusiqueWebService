@@ -26,6 +26,10 @@ public class Musique {
     private String titre;
 
     @NotNull
+    @Size(max = 255)
+    private String path;
+
+    @NotNull
     private Date dateSortie;
 
     @ManyToOne
@@ -142,5 +146,13 @@ public class Musique {
 
     public void setPlaylists(Set<Playlist> playlists) {
         this.playlists = playlists;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 }

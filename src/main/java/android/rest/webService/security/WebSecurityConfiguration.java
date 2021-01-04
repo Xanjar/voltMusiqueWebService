@@ -1,6 +1,9 @@
 package android.rest.webService.security;
 
 
+import android.rest.webService.dao.utilisateur.UtilisateurRepository;
+import android.rest.webService.service.utilisateur.UtilisateurDetailsServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -18,6 +21,8 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     private BCryptPasswordEncoder bCryptPasswordEncoder;
     private UserDetailsService userDetailsService;
+    @Autowired
+    private UtilisateurRepository repository;
     private static final String[] AUTH_WHITELIST = {
             "/",
             "/swagger-resources",
@@ -29,7 +34,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
             "/home"
     };
 
-    public WebSecurityConfiguration(UserDetailsService userDetailsService, BCryptPasswordEncoder bCryptPasswordEncoder) {
+    public WebSecurityConfiguration(UtilisateurDetailsServiceImpl userDetailsService, BCryptPasswordEncoder bCryptPasswordEncoder) {
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
         this.userDetailsService = userDetailsService;
     }
@@ -38,7 +43,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(AUTH_WHITELIST).permitAll()
                 .antMatchers(HttpMethod.POST, "/utilisateur/signup").permitAll()
                 .anyRequest().authenticated()
-                .and().addFilter(new AuthenticationFilter(authenticationManager()))
+                .and().addFilter(new AuthenticationFilter(authenticationManager(),repository))
                 .addFilter(new AuthorizationFilter(authenticationManager()))
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }

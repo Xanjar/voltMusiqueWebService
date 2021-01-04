@@ -5,16 +5,20 @@ import android.rest.webService.dao.musique.MusiqueRepository;
 import android.rest.webService.dao.utilisateur.UtilisateurRepository;
 import android.rest.webService.domain.musique.Musique;
 import android.rest.webService.service.storage.FileStorageService;
+import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
+import java.io.ByteArrayInputStream;
+import java.io.FileInputStream;
 import java.util.Date;
 
 @RestController
@@ -44,12 +48,26 @@ public class FilesController {
 
         try {
             storageService.save(file,musique.getIdMusique()+"");
+            musique.setPath(musique.getIdMusique()+"."+FilenameUtils.getExtension(file.getOriginalFilename()));
+            musiqueRepository.save(musique);
             message = "Uploaded the file successfully: " + file.getOriginalFilename();
             return ResponseEntity.status(HttpStatus.OK).body(message);
         } catch (Exception e) {
             musiqueRepository.deleteById(musique.getIdMusique());
             message = "Could not upload the file: " + file.getOriginalFilename()+ "!"+ e.getMessage();
             return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
+        }
+    }
+
+    @GetMapping("/download")
+    public ResponseEntity<Resource> downloadFile(@RequestParam("idmusique")Long idMusique) {
+        Musique musique = musiqueRepository.getOne(idMusique);
+        try {
+            Resource file = storageService.load(musique.getPath());
+            return ResponseEntity.ok().header(HttpHeaders.CONTENT_DISPOSITION,
+                    "attachment; filename=\"" + file.getFilename() + "\"").body(file);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(null);
         }
     }
 

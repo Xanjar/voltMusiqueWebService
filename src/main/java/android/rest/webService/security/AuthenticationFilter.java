@@ -1,9 +1,11 @@
 package android.rest.webService.security;
 
+import android.rest.webService.dao.utilisateur.UtilisateurRepository;
 import android.rest.webService.domain.utilisateur.Utilisateur;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -20,10 +22,13 @@ import java.util.Date;
 
 public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
+    private UtilisateurRepository repository;
+
     private AuthenticationManager authenticationManager;
 
-    public AuthenticationFilter(AuthenticationManager authenticationManager) {
+    public AuthenticationFilter(AuthenticationManager authenticationManager,UtilisateurRepository repository) {
         this.authenticationManager = authenticationManager;
+        this.repository = repository;
         setFilterProcessesUrl("/login");
     }
     @Override
@@ -42,5 +47,13 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
         .signWith(SignatureAlgorithm.HS512, "SecretKeyToGenJWTs".getBytes())
         .compact();
         response.addHeader("Authorization","Bearer " + token);
+        Utilisateur u = repository.findByEmail(((User)authentication.getPrincipal()).getUsername()).get(0);
+        response.addHeader("pseudo",u.getPseudo());
+        response.addHeader("email",u.getEmail());
+        response.addHeader("nom",u.getNom());
+        response.addHeader("prenom",u.getPrenom());
+        response.addHeader("date_naissance",u.getDateNaissance().toString());
+        response.addHeader("num_etu",u.getNumEtu());
+        response.addHeader("role",u.getRole().name());
     }
 }
