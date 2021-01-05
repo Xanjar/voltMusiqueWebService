@@ -2,6 +2,7 @@ package android.rest.webService.security;
 
 import android.rest.webService.dao.utilisateur.UtilisateurRepository;
 import android.rest.webService.domain.utilisateur.Utilisateur;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -48,12 +49,21 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
         .compact();
         response.addHeader("Authorization","Bearer " + token);
         Utilisateur u = repository.findByEmail(((User)authentication.getPrincipal()).getUsername()).get(0);
-        response.addHeader("pseudo",u.getPseudo());
-        response.addHeader("email",u.getEmail());
-        response.addHeader("nom",u.getNom());
-        response.addHeader("prenom",u.getPrenom());
-        response.addHeader("date_naissance",u.getDateNaissance().toString());
-        response.addHeader("num_etu",u.getNumEtu());
-        response.addHeader("role",u.getRole().name());
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        try {
+            response.getWriter().write(
+                    "{"+
+                            "\"pseudo\":\"" + u.getPseudo() + "\"," +
+                            "\"email\":\"" + u.getEmail() + "\"," +
+                            "\"nom\":\"" + u.getNom() + "\"," +
+                            "\"prenom\":\"" + u.getPrenom() + "\"," +
+                            "\"date_naissance\":\"" + u.getDateNaissance() + "\"," +
+                            "\"num_etu\":\"" + u.getNumEtu() + "\"," +
+                            "\"role\":\"" + u.getRole() + "\"" +
+                            "}");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
