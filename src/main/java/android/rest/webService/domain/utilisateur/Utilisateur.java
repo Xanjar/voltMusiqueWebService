@@ -3,6 +3,7 @@ package android.rest.webService.domain.utilisateur;
 import android.rest.webService.domain.album.Album;
 import android.rest.webService.domain.musique.Musique;
 import android.rest.webService.domain.playlist.Playlist;
+import net.minidev.json.annotate.JsonIgnore;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -37,6 +38,7 @@ public class Utilisateur {
     private Date dateNaissance;
 
     @Size(max = 255)
+    @JsonIgnore
     private String password;
 
     @NotNull

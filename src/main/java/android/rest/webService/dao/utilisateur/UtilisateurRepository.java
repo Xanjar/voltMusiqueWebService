@@ -1,5 +1,6 @@
 package android.rest.webService.dao.utilisateur;
 
+import android.rest.webService.domain.utilisateur.Role;
 import android.rest.webService.domain.utilisateur.Utilisateur;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
@@ -15,5 +16,9 @@ public interface UtilisateurRepository extends JpaRepository<Utilisateur, Long>,
 
     @RestResource(path = "byemail", rel="findByEmail")
     List<Utilisateur> findByEmail(@Param("email") String emailAddress);
+
+    @RestResource(path = "byrole", rel="findByRole")
+    List<Utilisateur> findByRole(@Param("role") Role role);
+
 
 }

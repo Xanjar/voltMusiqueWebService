@@ -4,6 +4,8 @@ import android.rest.webService.dao.album.AlbumRepository;
 import android.rest.webService.dao.musique.MusiqueRepository;
 import android.rest.webService.dao.utilisateur.UtilisateurRepository;
 import android.rest.webService.domain.musique.Musique;
+import android.rest.webService.domain.utilisateur.Role;
+import android.rest.webService.domain.utilisateur.Utilisateur;
 import android.rest.webService.service.storage.FileStorageService;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,11 +47,13 @@ public class FilesController {
                 .get(0));
         musique.setAlbum(albumRepository.getOne(idAlbum));
         musique = musiqueRepository.save(musique);
-
+        Utilisateur utilisateur = musique.getUtilisateur();
         try {
             storageService.save(file,musique.getIdMusique()+"");
             musique.setPath(musique.getIdMusique()+"."+FilenameUtils.getExtension(file.getOriginalFilename()));
             musiqueRepository.save(musique);
+            utilisateur.setRole(Role.MUSICIAN);
+            userRepository.save(utilisateur);
             message = "Uploaded the file successfully: " + file.getOriginalFilename();
             return ResponseEntity.status(HttpStatus.OK).body(message);
         } catch (Exception e) {
