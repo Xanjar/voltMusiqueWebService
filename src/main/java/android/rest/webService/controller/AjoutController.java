@@ -32,6 +32,7 @@ public class AjoutController {
         album.setUtilisateur(userRepository.
                 findByEmail(SecurityContextHolder.getContext().getAuthentication().getName())
                 .get(0));
+
         try {
             albumRepository.save(album);
         }
