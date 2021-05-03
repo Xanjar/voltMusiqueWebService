@@ -57,6 +57,12 @@ public class FileStorageService implements IFileStorageService{
     }
 
     @Override
+    public void delete(String filename) {
+        Path file = root.resolve(filename);
+        FileSystemUtils.deleteRecursively(file.toFile());
+    }
+
+    @Override
     public void deleteAll() {
         FileSystemUtils.deleteRecursively(root.toFile());
     }
