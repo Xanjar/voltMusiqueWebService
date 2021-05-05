@@ -54,6 +54,7 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
         try {
             response.getWriter().write(
                     "{"+
+                            "\"idutilisateur\":\"" + u.getIdutilisateur() + "\"," +
                             "\"pseudo\":\"" + u.getPseudo() + "\"," +
                             "\"email\":\"" + u.getEmail() + "\"," +
                             "\"nom\":\"" + u.getNom() + "\"," +
