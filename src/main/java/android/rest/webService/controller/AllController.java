@@ -5,6 +5,7 @@ import android.rest.webService.dao.musique.MusiqueRepository;
 import android.rest.webService.domain.album.Album;
 import android.rest.webService.domain.musique.Musique;
 import android.rest.webService.entity.ResponseMusiques;
+import android.rest.webService.entity.ResponseMusiquesList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,12 +25,13 @@ public class AllController {
     private MusiqueRepository musiqueRepository;
 
     @GetMapping("/musiques")
-    public ResponseEntity<List<ResponseMusiques>> recupAlbums() {
+    public ResponseEntity<ResponseMusiquesList> recupAlbums() {
         List<Musique> list = musiqueRepository.findAll();
         List<ResponseMusiques> responseMusiquesList = new ArrayList<ResponseMusiques>();
         for (Musique musique: list) {
             responseMusiquesList.add(new ResponseMusiques(musique,musique.getAlbum(),musique.getUtilisateur()));
         }
-        return ResponseEntity.status(HttpStatus.OK).body(responseMusiquesList);
+        ResponseMusiquesList response = new ResponseMusiquesList(responseMusiquesList);
+        return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 }
